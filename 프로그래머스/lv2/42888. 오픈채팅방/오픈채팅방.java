@@ -10,7 +10,7 @@ class Solution {
         for(String reco : record){
             String[] reco_line = reco.split(" ");
             
-            if(reco_line.length != 2)
+            if(reco_line[0].equals("Enter") || reco_line[0].equals("Change"))
                 id_name_list.put(reco_line[1], reco_line[2]);
         }
         
