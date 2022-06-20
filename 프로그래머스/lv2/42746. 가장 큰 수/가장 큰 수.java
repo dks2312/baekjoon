@@ -20,7 +20,8 @@ class Solution {
             answer += num;
         }
         
-        answer = answer.replaceAll("^0+", "0");
+        answer = answer.replaceAll("^0+", "");
+        if(answer.equals("")) answer = "0";
         
         return answer;
     }
