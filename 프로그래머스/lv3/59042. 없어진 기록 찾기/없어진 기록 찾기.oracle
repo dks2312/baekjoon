@@ -1,0 +1,14 @@
+-- 코드를 입력하세요
+-- SELECT o.ANIMAL_ID, o.NAME
+-- FROM ANIMAL_INS i
+--     LEFT OUTER JOIN ANIMAL_OUTS o
+--     on i.ANIMAL_ID = o.ANIMAL_ID
+-- ORDER BY o.ANIMAL_ID
+
+-- minus : 차집합
+-- <a> MINUS <b> : a의 레코드 중 b에 포함되지 않은 레코드
+-- 설명 : ANIMAL_OUTS의 레코드 중 ANIMAL_INS에 존재하지 않은 레코드
+SELECT ANIMAL_ID, NAME FROM ANIMAL_OUTS
+MINUS
+SELECT ANIMAL_ID, NAME FROM ANIMAL_INS
+ORDER BY ANIMAL_ID;
